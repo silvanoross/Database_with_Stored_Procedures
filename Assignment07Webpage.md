@@ -30,7 +30,8 @@ UDFs can also be utilized as check constraints where variable data being entered
   
 
 ## Differences Between Functions - (Scalar/In-line/Multi-Statement)
-Scalar Functions: As the name alludes to, although it is not too incredibly clear, these functions can be used individually, or they can be “scaled” up. This is akin to how a new company aims on scaling up its business and creating operations that are implementable many times over with ease. This means, in SQL terms, a scalar function can be incorporated into a select statement and perform its code on every single defined parameter throughout a specified table or be called on multiple times. 
+### Scalar Functions:
+As the name alludes to, although it is not too incredibly clear, these functions can be used individually, or they can be “scaled” up. This is akin to how a new company aims on scaling up its business and creating operations that are implementable many times over with ease. This means, in SQL terms, a scalar function can be incorporated into a select statement and perform its code on every single defined parameter throughout a specified table or be called on multiple times. 
 
 
 ![RRootQuery](https://github.com/silvanoross/DBFoundations-Module07/blob/main/RRootQuery.PNG)
@@ -38,12 +39,14 @@ Scalar Functions: As the name alludes to, although it is not too incredibly clea
 
 Here we can see the function “dbo.MultiplyValues()” operate on two different attributes within the table “SalesPrice,” and “SalesQty” and return a defined column “ExtendedPrice” representing the total price of the sale on a line item. The function was defined earlier to multiply the first and second parameter entered into the function. This can be called on to do more work on different parameters in different contexts. 
 
-In-line Functions: These functions are much simpler in how they are used, but their base coding can still be complex. They often only hold one statement and are called upon “in-line” or by simply using:
+### In-line Functions: 
+These functions are much simpler in how they are used, but their base coding can still be complex. They often only hold one statement and are called upon “in-line” or by simply using:
 SELECT * FROM fFunction(parameter);
 GO
 They will mostly return a table that has been defined by the inserted parameter and do not usually require a BEGIN or END circumscription.   
 
-Multi-Statement Table Valued Functions (MSTVFs): These functions are exactly as their name implies, multi-statement and centered around a table. Unlike an in-line function which holds only one statement, these functions can hold a multitude of statements if necessary. They are also more nuanced in their coding returning a self defined and created table. Let’s take a look at an example from (3).
+### Multi-Statement Table Valued Functions (MSTVFs):
+These functions are exactly as their name implies, multi-statement and centered around a table. Unlike an in-line function which holds only one statement, these functions can hold a multitude of statements if necessary. They are also more nuanced in their coding returning a self defined and created table. Let’s take a look at an example from (3).
 ![MSVTF](https://github.com/silvanoross/DBFoundations-Module07/blob/main/MSTVF.PNG)
 > Figure 2.2 Image from [SQL Shack](https://www.sqlshack.com/sql-server-multi-statement-table-valued-functions/)
 
